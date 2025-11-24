@@ -1,0 +1,296 @@
+/* ========================================
+   LOJA DE VEÍCULOS - CSS SIMPLES E ELEGANTE
+   Paleta: Azul Marinho
+   ======================================== */
+
+/* ----------------------------------------
+   RESET E CONFIGURAÇÕES BÁSICAS
+   ---------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #020A17; /* Fundo cinza claro azulado */
+  color: #1a2332; /* Texto azul marinho escuro */
+}
+
+/* ========================================
+   HEADER - CABEÇALHO
+   ======================================== */
+header {
+  background-color: #020A17; /* Azul marinho principal */
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Links do menu */
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4a90e2; /* Azul claro no hover */
+}
+
+/* Botão de Login */
+.login {
+  background-color: #4a90e2; /* Azul claro */
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login:hover {
+  background-color: #357abd; /* Azul mais escuro no hover */
+}
+
+/* ========================================
+   HERO - SEÇÃO PRINCIPAL
+   ======================================== */
+.hero {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+  margin: 30px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1a3a52; /* Azul marinho */
+}
+
+/* Texto descritivo */
+.hero p {
+  font-size: 16px;
+  color: #5a6c7d; /* Cinza azulado */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Botão principal "Compre Agora" */
+.btn-main {
+  display: inline-block;
+  background-color: #4a90e2; /* Azul claro */
+  color: #ffffff;
+  padding: 14px 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-main:hover {
+  background-color: #357abd; /* Azul mais escuro */
+}
+
+/* ========================================
+   SEÇÃO DE PRODUTOS - CARROS E MOTOS
+   ======================================== */
+.produtos {
+  background-color: #ffffff;
+  padding: 50px 60px;
+  margin: 30px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da seção (Carros/Motos) */
+.produtos h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1a3a52; /* Azul marinho */
+  text-transform: uppercase;
+  border-bottom: 3px solid #4a90e2; /* Linha azul embaixo */
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+/* ----------------------------------------
+   GRID - LAYOUT DOS CARDS
+   ---------------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsivo */
+  gap: 25px; /* Espaço entre os cards */
+  margin-top: 20px;
+}
+
+/* ----------------------------------------
+   CARD DE PRODUTO - CARROS E MOTOS
+   ---------------------------------------- */
+.produto {
+  background-color: #f9fbfc; /* Fundo cinza muito claro */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+/* Efeito hover: card levanta */
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.2);
+}
+
+/* Imagem do produto */
+.produto .img {
+  width: 100%;
+  height: 250px; /* Aumentado de 180px para 250px */
+  background-color: #e3eaf1; /* Cinza azulado claro */
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Nome do produto */
+.produto .nome-produto {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1a3a52; /* Azul marinho */
+}
+
+/* Detalhes (ano e cor) */
+.produto .detalhes {
+  font-size: 13px;
+  color: #5a6c7d; /* Cinza azulado */
+  margin-bottom: 10px;
+}
+
+/* Preço */
+.produto .preco {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a90e2; /* Azul claro */
+}
+
+/* Botão "Comprar" */
+.produto button {
+  width: 100%;
+  background-color: #1a3a52; /* Azul marinho */
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.produto button:hover {
+  background-color: #2a4a62; /* Azul marinho mais claro */
+}
+
+/* ========================================
+   SEÇÃO DE VENDEDORES
+   ======================================== */
+.vendedores {
+  background-color: #ffffff;
+  padding: 50px 60px;
+  margin: 30px 60px 60px 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título "VENDEDORES" */
+.vendedores h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a3a52; /* Azul marinho */
+  text-transform: uppercase;
+}
+
+/* Texto descritivo */
+.vendedores > p {
+  font-size: 16px;
+  color: #5a6c7d; /* Cinza azulado */
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------
+   CARD DE VENDEDOR
+   ---------------------------------------- */
+.vendedor {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Hover: card levanta */
+.vendedor:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagem do vendedor */
+.vendedor .img {
+  width: 100%;
+  height: 250px; /* Aumentado de 180px para 250px */
+  background-color: #e3eaf1; /* Cinza azulado claro */
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Nome do vendedor */
+.vendedor .nome-vendedor {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a3a52; /* Azul marinho */
+  margin-bottom: 5px;
+}
+
+/* Cargo do vendedor */
+.vendedor .cargo {
+  font-size: 14px;
+  color: #5a6c7d; /* Cinza azulado */
+  margin-bottom: 5px;
+}
+
+.logo {
+  width: 300px;
+}
